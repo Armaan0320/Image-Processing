@@ -19,13 +19,19 @@ print(img.size)
 #cv2.imshow("window", img)
 #cv2.imshow("window", img_gray)
 
-#showing yellowish tint
-blue = img[:,:,0] #basically its a 3d numpy array and we zeroed out the blue channel completely
+# #showing yellowish tint
+# blue = img[:,:,0] #basically its a 3d numpy array and we zeroed out the blue channel completely
 
-green = img[:,:,1] #we zeroed out the green  channel completely - purple shade
+# green = img[:,:,1] #we zeroed out the green  channel completely - purple shade
 
-red = img[:,:,2] #we zeroed out the red  channel completely - aqua type shade
+# red = img[:,:,2] #we zeroed out the red  channel completely - aqua type shade
 
-new_img = np.hstack((blue, green, red))
-cv2.imshow("window", new_img)
+# new_img = np.hstack((blue, green, red))
+
+# cv2.imshow("window", new_img)
+
+img_resize = cv2.resize(img, (800,800))
+img_resize = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2))
+
+cv2.imshow("window", img_resize)
 cv2.waitKey(0)
