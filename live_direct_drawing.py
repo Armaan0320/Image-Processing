@@ -14,7 +14,7 @@ def draw(event, x, y, flags, params):
     #     print("Mouse down clicked")
     # elif event == 4:
     #     print("Mouse key released.")
-
+ 
     if event ==1:
         cv2.circle(img, center=(x,y), radius = 50, color =(0,0,255),thickness =-1)
 
