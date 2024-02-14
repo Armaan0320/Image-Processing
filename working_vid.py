@@ -4,7 +4,7 @@ import numpy as np
 cap = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter("output.avi", fourcc, 20.0, (1280,720))
-
+  
 while True:
     ret, frame = cap.read() #return will tell wheather the video is stopped or running.
     out.write(frame)
